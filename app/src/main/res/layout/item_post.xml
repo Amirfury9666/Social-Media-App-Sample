@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.amir.socialmediaappsample.model.PostModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/postHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/padding8"
+                    android:paddingLeft="@dimen/padding10">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userImage"
+                        android:layout_width="@dimen/profileAvatarWidth"
+                        android:layout_height="@dimen/profileAvatarHeight"
+                        android:layout_centerVertical="true"
+                        app:loadPostImage="@{model.postImage}" />
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/userImage"
+                        android:layout_marginLeft="@dimen/margin16"
+                        android:layout_toRightOf="@id/userImage"
+                        android:singleLine="true"
+                        android:text="@{model.userName}"
+                        android:textColor="@color/blackColor"
+                        android:textSize="@dimen/textSize14"
+                        android:textStyle="bold"
+                        tools:text="Amir Fury" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userName"
+                        android:layout_alignStart="@id/userName"
+                        android:layout_alignLeft="@id/userName"
+                        android:text="Today"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/textSize8"
+                        android:textStyle="bold"
+                        tools:text="Today" />
+
+                    <ImageView
+                        android:id="@+id/moreOptionsButton"
+                        android:layout_width="@dimen/profileAvatarWidth"
+                        android:layout_height="@dimen/profileAvatarHeight"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/padding3"
+                        android:src="@drawable/ic_more_verticle_dots" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/postText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="10"
+                    android:paddingHorizontal="@dimen/padding16"
+                    android:paddingBottom="@dimen/padding8"
+                    android:text="@{model.postText}"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/textSize14"
+                    tools:text="Amir Fury" />
+
+
+                <ImageView
+                    android:id="@+id/postImage"
+                    loadPostImage="@{model.postImage}"
+                    setPostImageVisibility="@{model}"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tom" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/padding5"
+                    android:paddingHorizontal="@dimen/padding16">
+
+                    <ImageView
+                        android:id="@+id/likeButton"
+                        setPostLikeStatus="@{model.liked}"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/margin16"
+                        android:padding="@dimen/padding8"
+                        android:src="@drawable/ic_heart_in_active" />
+
+                    <ImageView
+                        android:id="@+id/commentButton"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin16"
+                        android:layout_marginRight="@dimen/margin16"
+                        android:padding="@dimen/padding8"
+                        android:src="@drawable/ic_comment" />
+
+                    <ImageView
+                        android:id="@+id/shareButton"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/margin16"
+                        android:padding="@dimen/padding8"
+                        android:src="@drawable/ic_share" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

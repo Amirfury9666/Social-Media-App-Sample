@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Social Media App Sample</string>
+    <string name="createPost">Create Post</string>
+    <string name="gallery">Gallery</string>
+    <string name="post">POST</string>
+    <string name="noPostText">No Posts Yet, Create New</string>
+    <string name="postUploading">Post Uploading...</string>
+    <string name="socialMediaSample">Social Media Sample</string>
+
+
+    <string-array name="images">
+        <item>https://i.redd.it/itcc1krw2ny11.png</item>
+        <item>https://i.redd.it/2xdf0rctfmy11.jpg</item>
+        <item>https://i.redd.it/r0f6ipf4qdy11.png</item>
+        <item>https://i.redd.it/jltvdfke8ey11.jpg</item>
+        <item>https://i.redd.it/jng10m1fj6y11.jpg</item>
+        <item>https://i.redd.it/i3xber4xpzx11.jpg</item>
+        <item>https://i.redd.it/1rufso3ptyx11.jpg</item>
+        <item>https://i.redd.it/1nl6h2o7krx11.jpg</item>
+        <item>https://i.redd.it/kxpkvo4ujkx11.png</item>
+        <item>https://i.redd.it/zcw3g7pk7kx11.jpg</item>
+        <item>https://i.redd.it/itcc1krw2ny11.png</item>
+        <item>https://i.redd.it/2xdf0rctfmy11.jpg</item>
+        <item>https://i.redd.it/r0f6ipf4qdy11.png</item>
+        <item>https://i.redd.it/jltvdfke8ey11.jpg</item>
+        <item>https://i.redd.it/jng10m1fj6y11.jpg</item>
+        <item>https://i.redd.it/i3xber4xpzx11.jpg</item>
+        <item>https://i.redd.it/1rufso3ptyx11.jpg</item>
+        <item>https://i.redd.it/1nl6h2o7krx11.jpg</item>
+        <item>https://i.redd.it/kxpkvo4ujkx11.png</item>
+        <item>https://i.redd.it/zcw3g7pk7kx11.jpg</item>
+        <item>https://i.redd.it/itcc1krw2ny11.png</item>
+        <item>https://i.redd.it/2xdf0rctfmy11.jpg</item>
+        <item>https://i.redd.it/r0f6ipf4qdy11.png</item>
+        <item>https://i.redd.it/jltvdfke8ey11.jpg</item>
+        <item>https://i.redd.it/jng10m1fj6y11.jpg</item>
+        <item>https://i.redd.it/i3xber4xpzx11.jpg</item>
+        <item>https://i.redd.it/1rufso3ptyx11.jpg</item>
+        <item>https://i.redd.it/1nl6h2o7krx11.jpg</item>
+        <item>https://i.redd.it/kxpkvo4ujkx11.png</item>
+        <item>https://i.redd.it/zcw3g7pk7kx11.jpg</item>
+    </string-array>
+
+</resources>

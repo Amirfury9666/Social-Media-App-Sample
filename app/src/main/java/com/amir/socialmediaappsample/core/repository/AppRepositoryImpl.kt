@@ -1,7 +1,7 @@
-package com.amir.socialmediaappsample.repository
+package com.amir.socialmediaappsample.core.repository
 
 import androidx.lifecycle.LiveData
-import com.amir.socialmediaappsample.db.PostDao
+import com.amir.socialmediaappsample.core.db.PostDao
 import com.amir.socialmediaappsample.model.PostModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

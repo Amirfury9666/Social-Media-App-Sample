@@ -9,7 +9,9 @@ import com.amir.socialmediaappsample.R
 import com.amir.socialmediaappsample.adapter.PostListAdapter
 import com.amir.socialmediaappsample.core.base.BaseActivity
 import com.amir.socialmediaappsample.databinding.ActivityHomeBinding
+import com.amir.socialmediaappsample.extensions.hide
 import com.amir.socialmediaappsample.extensions.launchActivity
+import com.amir.socialmediaappsample.extensions.show
 import com.amir.socialmediaappsample.extensions.toast
 import com.amir.socialmediaappsample.listener.IPostItemClickListener
 import com.amir.socialmediaappsample.model.PostModel
@@ -28,13 +30,11 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), KodeinAware, IPostItem
     private val _viewModel: PostViewModel by instance()
     private val adapter = PostListAdapter(this)
 
-    private lateinit var mBinding: ActivityHomeBinding
     override val layoutRes: Int get() = R.layout.activity_home
 
     override fun getToolbar(binding: ActivityHomeBinding): Toolbar? = binding.toolbar
 
     override fun onActivityReady(instanceState: Bundle?, binding: ActivityHomeBinding) {
-        mBinding = binding
         setToolbarTitle(getString(R.string.socialMediaSample))
         setClicks(binding)
         binding.recycler.adapter = adapter
@@ -53,9 +53,14 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), KodeinAware, IPostItem
     private fun fetchPostList(binding: ActivityHomeBinding) = launch {
         val posts = _viewModel.getAllPostsAsync().await()
         posts.observe(this@HomeActivity, {
-            Collections.reverse(it)
-            adapter.submitList(it)
-            Handler().postDelayed({ binding.recycler.smoothScrollToPosition(0) }, 2000)
+            if (it.isNullOrEmpty()) {
+                binding.noPostTv.show()
+            } else {
+                binding.noPostTv.hide()
+                Collections.reverse(it)
+                adapter.submitList(it)
+                Handler().postDelayed({ binding.recycler.smoothScrollToPosition(0) }, 2000)
+            }
         })
     }
 
@@ -89,7 +94,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), KodeinAware, IPostItem
     }
 
     override fun onMenuButtonClick(postModel: PostModel, position: Int) {
-        PostOptionsDialog(this,_viewModel,postModel).show()
+        PostOptionsDialog(this, _viewModel, postModel).show()
     }
 
     override fun onPostClick(postModel: PostModel, position: Int) {

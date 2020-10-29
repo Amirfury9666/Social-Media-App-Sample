@@ -1,4 +1,4 @@
-package com.amir.socialmediaappsample.repository
+package com.amir.socialmediaappsample.core.repository
 
 import androidx.lifecycle.LiveData
 import com.amir.socialmediaappsample.model.PostModel

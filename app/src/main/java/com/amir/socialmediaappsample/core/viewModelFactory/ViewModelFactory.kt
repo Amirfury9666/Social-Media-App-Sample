@@ -1,8 +1,8 @@
-package com.amir.socialmediaappsample.viewModelFactory
+package com.amir.socialmediaappsample.core.viewModelFactory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.amir.socialmediaappsample.repository.AppRepository
+import com.amir.socialmediaappsample.core.repository.AppRepository
 import com.amir.socialmediaappsample.viewModel.PostViewModel
 
 @Suppress("UNCHECKED_CAST")

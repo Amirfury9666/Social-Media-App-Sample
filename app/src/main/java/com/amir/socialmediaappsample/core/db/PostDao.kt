@@ -1,4 +1,4 @@
-package com.amir.socialmediaappsample.db
+package com.amir.socialmediaappsample.core.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

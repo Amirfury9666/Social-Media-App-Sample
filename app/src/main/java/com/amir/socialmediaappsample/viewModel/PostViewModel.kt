@@ -3,7 +3,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.amir.socialmediaappsample.extensions.lazyDeferred
 import com.amir.socialmediaappsample.model.PostModel
-import com.amir.socialmediaappsample.repository.AppRepository
+import com.amir.socialmediaappsample.core.repository.AppRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers

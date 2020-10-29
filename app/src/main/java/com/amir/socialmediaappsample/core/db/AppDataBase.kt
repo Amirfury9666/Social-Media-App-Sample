@@ -1,4 +1,4 @@
-package com.amir.socialmediaappsample.db
+package com.amir.socialmediaappsample.core.db
 
 import android.content.Context
 import androidx.room.Database

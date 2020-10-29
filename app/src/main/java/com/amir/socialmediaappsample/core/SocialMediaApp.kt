@@ -1,12 +1,12 @@
 package com.amir.socialmediaappsample.core
 
 import android.app.Application
-import com.amir.socialmediaappsample.db.AppDataBase
-import com.amir.socialmediaappsample.db.PostDao
-import com.amir.socialmediaappsample.repository.AppRepository
-import com.amir.socialmediaappsample.repository.AppRepositoryImpl
+import com.amir.socialmediaappsample.core.db.AppDataBase
+import com.amir.socialmediaappsample.core.db.PostDao
+import com.amir.socialmediaappsample.core.repository.AppRepository
+import com.amir.socialmediaappsample.core.repository.AppRepositoryImpl
 import com.amir.socialmediaappsample.viewModel.PostViewModel
-import com.amir.socialmediaappsample.viewModelFactory.ViewModelFactory
+import com.amir.socialmediaappsample.core.viewModelFactory.ViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
